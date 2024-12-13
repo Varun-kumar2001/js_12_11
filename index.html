@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>open console for output</h2>
+
+
+    <script>
+
+
+        //  QUESTION 31
+        function cgpa(grade) {
+            let points = 0
+            for (i = 0; i < grade.length; i++) {
+                points += +grade[i]
+            }
+
+            let totalgrade = (points / grade.length)
+            console.log(totalgrade)
+        }
+
+
+        let grade = prompt("enter your grades according to subjects ").split(" ")
+        cgpa(grade)
+
+        //  QUESTION 32
+
+        function bill(bamt) {
+            let tax = 0
+            let total = 0
+            if (bamt > 100) {
+                tax += Math.floor(bamt * 0.1)
+                total += bamt + tax
+                console.log(bill amount${ bamt } + ${ tax } = ${ total })
+            }
+            else if (bamt >= 500) {
+                tax += Math.floor(bamt * 0.15)
+                total += bamt + tax
+                console.log(bill amount${ bamt } + ${ tax } = ${ total })
+            }
+            else {
+                console.log(no tax for your bill and fianl amount is ${ bamt })
+            }
+
+        }
+
+        let bamt = +prompt("enter your bill amount ")
+        bill(bamt)
+
+
+        //  QUESTION 33
+
+        function si(pa, tp, ri) {
+            let simpleinterest = (p * t * r) / 100
+            console.log(simpleinterest)
+        }
+
+
+        let p = +prompt("enter your principle amount ")
+        let t = +prompt("enter your time period ")
+        let r = +prompt("enter your rate of interest ")
+        si(p, t, r)
+
+
+        //  QUESTION 34
+
+        function latefee(days) {
+            let fine = 0
+            if (days <= 15) {
+                fine += (days * 2)
+                console.log(fine ${ fine })
+            }
+            else {
+                fine += (days * 5)
+                console.log(fine ${ fine })
+            }
+        }
+
+        let days = +prompt("enter no of days delayed ")
+        latefee(days)
+
+        //  QUESTION 35
+
+        function roomrent(Class, days) {
+            let rent = 0
+            if (Class == "standard") {
+                rent += (days * 100)
+                console.log(rent)
+            }
+            else if (Class == "deluxe") {
+                rent += (days * 500)
+                console.log(rent)
+            }
+            else if (Class == "suite") {
+                rent += (days * 1000)
+                console.log(rent)
+            }
+            else {
+                console.log("enter valid input like Standard, Deluxe, Suite")
+            }
+        }
+        let Class = prompt("enter type of class ").toLowerCase()
+        let days = +prompt("enter no of days staying ")
+        roomrent(Class, days)
+    </script>
+</body>
+
+</html>
